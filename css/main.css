@@ -1,19 +1,12 @@
-div.header {
-  background-color: #256fe8;
-  height: 150px;
-  width: 100%;
+div.content {
+   padding: 55px;
+   border-radius: 16px;
+   border: 10px solid black;
+   background-clip: padding-box;
 }
-
-h1.header {
-  text-align: center;
-  padding: 20px;
-  color: #94989e;
-  border-color: #313235;
-  border-radius: 50px;
-  border-style: solid;
-}
-
-body {
-    background-image: url("file:///C:/Users/18osfr/git/myFlow.se/src-image/background.jpg");
-    background-repeat: no-repeat;
+html {
+    background-image: url("file:///D:/git/myFlow.se/src-image/background.jpg");
+    /* background-image: url("file:///C:/Users/18osfr/git/myFlow.se/src-image/background.jpg"); Laptop path */
+    background-repeat: repeat-y;
+    background-size: 100% auto;
 }
