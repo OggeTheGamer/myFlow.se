@@ -3,10 +3,19 @@ div.content {
    border-radius: 16px;
    border: 10px solid black;
    background-clip: padding-box;
+   background-color: #4a4a4ab8 !important;
 }
 html {
-    background-image: url("file:///D:/git/myFlow.se/src-image/background.jpg");
-    /* background-image: url("file:///C:/Users/18osfr/git/myFlow.se/src-image/background.jpg"); Laptop path */
+    /*background-image: url("file:///D:/git/myFlow.se/src-image/background.jpg"); /**/
+    background-image: url("file:///C:/Users/18osfr/git/myFlow.se/src-image/background.jpg"); /*Laptop path*/
     background-repeat: repeat-y;
     background-size: 100% auto;
+}
+
+body {
+  background-color: unset !important;
+}
+
+h1 h2 h3 h4 h5 h6 p .content {
+  color: #fff !important;
 }
