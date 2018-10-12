@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="scripts/main.js"></script>
-    <scirpt src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="scripts/bootstrap.bundle.js"></script>
     <source src="src-image"></source>
     <link rel="stylesheet" href="css/main.css"></link>
@@ -38,30 +39,45 @@
         </li>
       </ul>
     </nav>
+    <!--This div is a blogpost-->
     <div id="top" class="container-fluid mt-2 col-md-12 bg-dark content">
       <h1>Hello!</h1>
       <h3>And Welcome</h3>
       <br>
-      <p>This is my bloging/picture/shitposting site<br>So i hope your Enjoy!</p>
+      <p>This is my bloging/picture/shitposting site<br>So i hope you will enjoy your stay!</p>
     </div>
-        <!-- Modal -->
-    <div id="myModal" class="modal-dialog modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Hi!</h4>
-          </div>
-          <div class="modal-body">
-            <p>Why did you open me?<br><br>WHY!?!?</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <div id="P2" class="container-fluid mt-2 col-md-12 bg-dark content">
+      <h1>TITLE!</h1>
+      <h3>DATE!</h3>
+      <br>
+      <p>TEST IMAGE</p>
+      <br>
+      <img src="file:///C:/Users/18osfr/git/myFlow.se/src-image/Post-Images/The%20Crew%20Screenshot%202018.07.23%20-%2019.37.46.90.png" alt="Image not showing? Osacr forgot pathing it!" style="width: 50%; height: 50%;"></img>
+    </div>
+    <div id="P1" class="container-fluid mt-2 col-md-12 bg-dark content">
+      <h1>TITLE!</h1>
+      <h3>DATE!</h3>
+      <br>
+      <p>TEST!</p>
+    </div>
+      <!-- Modal -->
+    <div class="container" style="z-index: 1">
+      <div id="myModal" class="modal-dialog modal-dialog-centered modal fade" style="position: absolute;" role="dialog" >
+        <div class="modal-dialog modal-dialog-centered" style="position: absolute center">
+            <!-- Modal content-->
+          <div class="modal-content" style="color: #000">
+            <div class="modal-header">
+              <h4 class="modal-title">Hi!</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p>Why did you open me?<br><br>WHY!?!?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </body>
