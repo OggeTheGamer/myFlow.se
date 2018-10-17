@@ -19,8 +19,7 @@
         <img src="src-image/logo.jpg" alt="logo" style="width:40px;">
       </a>
       <form class="form-inline" action="">
-        <input id="search" class="form-control mr-sm-2" type="text" placeholder="Search for a post!">
-        <button class="btn btn-success" style="margin-right: 20px;" type="submit">Search</button>
+        <input id="postSearchBar" class="form-control mr-sm-2" type="text" onkeyup="postSearch()" placeholder="Search for a post!">
       </form>
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -35,43 +34,57 @@
         </li>
         <li class="nav-item">
           <div class="button-css">
-            <a type="button" class="nav-link navbar-button btn-primary"  data-toggle="modal" data-target="#myModal" href="#myModal" >FaQ</a>
+            <a type="button" class="nav-link navbar-button btn-primary"  data-toggle="modal" data-target="#FAQModal" href="#FAQModal" >FaQ</a>
           </div>
         </li>
       </ul>
     </nav>
+    <!-- <li hidden><a href="#"></a></li> -->
     <!--This div is a blogpost-->
-    <div id="top" class="container-fluid mt-2 col-md-12 bg-dark content">
-      <h1>Hello!</h1>
-      <h3>And Welcome</h3>
-      <br>
-      <p>This is my bloging/picture/shitposting site<br>So i hope you will enjoy your stay!</p>
-    </div>
-    <div id="P2" class="container-fluid mt-2 col-md-12 bg-dark content">
-      <h1>TITLE!</h1>
-      <h3>DATE!</h3>
-      <br>
-      <p>TEST IMAGE</p>
-      <br>
-      <img src="file:///C:/Users/18osfr/git/myFlow.se/src-image/Post-Images/The%20Crew%20Screenshot%202018.07.23%20-%2019.37.46.90.png" alt="Image not showing? Osacr forgot pathing it!" style="width: 50%; height: 50%;"></img>
-    </div>
-    <div id="P1" class="container-fluid mt-2 col-md-12 bg-dark content">
-      <h1>TITLE!</h1>
-      <h3>DATE!</h3>
-      <br>
-      <p>TEST!</p>
-    </div>
-      <!-- Modal -->
-    <div class="container" style="z-index: 1;">
-      <div id="myModal" class="modal-dialog modal-dialog-centered modal fade" style="width: 50%;" role="dialog" >
-          <!-- Modal content-->
-        <div class="modal-content" style="color: #000">
+    <ul id="blogPosts">
+      <li><a hidden href="#top">top</a>
+      <div id="top" class="container-fluid mt-2 col-md-12 bg-dark content">
+        <span>
+          <h1 id="postTitle">Hello!</h1>
+          <h3>And Welcome</h3>
+          <br>
+          <p>This is my bloging/picture/shitposting site<br>So i hope you will enjoy your stay!</p>
+        </span>
+      </div>
+      </li>
+      <li><a hidden href="#14/10/2018">14/10/2018</a>
+      <div id="testPostOne" class="container-fluid mt-2 col-md-12 bg-dark content">
+        <span>
+          <h1 id="postTitle">TITLE!</h1>
+          <h3 id="postDate">DATE!</h3>
+          <br>
+          <p>TEST IMAGE</p>
+          <br>
+          <img src="src-image/Post-Images/The%20Crew%20Screenshot%202018.07.23%20-%2019.37.46.90.png" alt="Image not showing? Osacr forgot pathing it!" style="width: 50%; height: 50%;"></img>
+        </span>
+      </div>
+      </li>
+      <li><a hidden href="#17/10/2018">17/10/2018</a>
+      <div id="testPostTwo" class="container-fluid mt-2 col-md-12 bg-dark content">
+          <h1 id="postTitle">TITLE!</h1>
+          <h3 id="postDate">17/10 2018<</h3>
+          <br>
+          <p>TEST!</p>
+      </div>
+      </li>
+    </ul>
+        <!-- Modal -->
+    <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Hi!</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5 class="modal-title" id="FAQModalLabel">Frequently Asked Questions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body">
-            <p>Why did you open me?<br><br>WHY!?!?</p>
+            <span>Hej</span>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>

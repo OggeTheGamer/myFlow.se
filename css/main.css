@@ -8,7 +8,7 @@ div.content {
 }
 html {
     /*background-image: url("file:///D:/git/myFlow.se/src-image/background.jpg"); /**/
-    background-image: url("file:///C:/Users/18osfr/git/myFlow.se/src-image/background.jpg"); /*Laptop path*/
+    background-image: url('../src-image/background.jpg'); /*Laptop path*/
     background-repeat: repeat-y;
     background-size: 100% auto;
 }
@@ -31,4 +31,13 @@ h1 h2 h3 h4 h5 h6 p .content {
 
 .content {
   color: #fff;
+}
+
+/*Fixing the modal 16px changing background problem*/
+.modal-open {
+  overflow: auto;padding-right:0 !important;
+}
+
+#blogPosts {
+  padding-left: 0 !important;
 }
