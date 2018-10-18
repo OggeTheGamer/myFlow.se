@@ -16,25 +16,25 @@
   <body>
     <nav class="navbar navbar-expand-sm bg-dark fixed-top">
       <a class="navbar-brand" href="#top" data-toggle="tooltip" title="To the top!">
-        <img src="src-image/logo.jpg" alt="logo" style="width:40px;">
+        <img src="src-image/logo.png" alt="logo" style="width:40px;">
       </a>
       <form class="form-inline" action="">
-        <input id="postSearchBar" class="form-control mr-sm-2" type="text" onkeyup="postSearch()" placeholder="Search for a post!">
+        <input id="postSearchBar" class="form-control mr-sm-2" data-toggle="tooltip" title="Search for a Date or Title!" type="text" onkeyup="postSearch()" placeholder="Search for a post!">
       </form>
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="button-css">
-            <a type="button" class="nav-link navbar-button btn-primary" href="#">Link 1</a>
+            <a type="button" class="nav-link navbar-button btn-primary" data-toggle="tooltip" title="I DO NOT GO ANYWARE! (-_-)" href="#">(-_-)</a>
           </div>
         </li>
         <li class="nav-item">
           <div class="button-css">
-            <a type="button" class="nav-link navbar-button btn-primary" href="#">Link 2</a>
+            <a type="button" class="nav-link navbar-button btn-primary" data-toggle="tooltip" title="An amazing organisation Im working with :)" href="https://www.brainpoolsweden.com/">Brainpool</a>
           </div>
         </li>
         <li class="nav-item">
           <div class="button-css">
-            <a type="button" class="nav-link navbar-button btn-primary"  data-toggle="modal" data-target="#FAQModal" href="#FAQModal" >FaQ</a>
+            <a type="button" class="nav-link navbar-button btn-primary" data-toggle="modal" data-target="#FAQModal" href="#FAQModal" >FaQ</a>
           </div>
         </li>
       </ul>
@@ -42,7 +42,7 @@
     <!-- <li hidden><a href="#"></a></li> -->
     <!--This div is a blogpost-->
     <ul id="blogPosts">
-      <li><a hidden href="#top">top</a>
+      <li><a style="overflow:auto;"hidden href="#top">top hello</a>
       <div id="top" class="container-fluid mt-2 col-md-12 bg-dark content">
         <span>
           <h1 id="postTitle">Hello!</h1>
@@ -52,24 +52,26 @@
         </span>
       </div>
       </li>
-      <li><a hidden href="#14/10/2018">14/10/2018</a>
-      <div id="testPostOne" class="container-fluid mt-2 col-md-12 bg-dark content">
+      <li><a hidden href="#14/10 2018">14/10/2018 Screenshot + Photoshop = Amazing picture!</a>
+      <div id="post1" class="container-fluid mt-2 col-md-12 bg-dark content">
         <span>
-          <h1 id="postTitle">TITLE!</h1>
-          <h3 id="postDate">DATE!</h3>
+          <h1 id="postTitle">Screenshot + Photoshop = Amazing picture!</h1>
+          <h3 id="postDate">14/10 2018</h3>
           <br>
-          <p>TEST IMAGE</p>
+          <p>This is the image that i edited with photoshop during class...<br>It looks pretty good!</p>
           <br>
           <img src="src-image/Post-Images/The%20Crew%20Screenshot%202018.07.23%20-%2019.37.46.90.png" alt="Image not showing? Osacr forgot pathing it!" style="width: 50%; height: 50%;"></img>
         </span>
       </div>
       </li>
-      <li><a hidden href="#17/10/2018">17/10/2018</a>
-      <div id="testPostTwo" class="container-fluid mt-2 col-md-12 bg-dark content">
-          <h1 id="postTitle">TITLE!</h1>
-          <h3 id="postDate">17/10 2018<</h3>
+      <li><a hidden href="#17/10/2018">17/10/2018 This is just a test</a>
+      <div id="testPost1" class="container-fluid mt-2 col-md-12 bg-dark content">
+        <span>
+          <h1 id="postTitle">This is just a test</h1>
+          <h3 id="postDate">17/10 2018</h3>
           <br>
-          <p>TEST!</p>
+          <p>This is just a blogpost test to see that everything works</p>
+        </span>
       </div>
       </li>
     </ul>
@@ -84,7 +86,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <span>Hej</span>
+            <span>I don't really get a lot of questions...</span>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>

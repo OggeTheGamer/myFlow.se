@@ -7,10 +7,12 @@ div.content {
    background-color: #4a4a4ab8 !important;
 }
 html {
-    /*background-image: url("file:///D:/git/myFlow.se/src-image/background.jpg"); /**/
-    background-image: url('../src-image/background.jpg'); /*Laptop path*/
+
+    background-image: url('../src-image/background.jpg');
     background-repeat: repeat-y;
     background-size: 100% auto;
+    background-attachment: fixed;
+    overflow-y: scroll ;
 }
 
 body {
@@ -26,7 +28,8 @@ h1 h2 h3 h4 h5 h6 p .content {
   overflow: hidden;
   border: 0px solid #f00;
   border-radius: 0.5rem;
-  width: 70px;
+  min-width: 70px;
+  text-align: center;
 }
 
 .content {
