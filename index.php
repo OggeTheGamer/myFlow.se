@@ -56,81 +56,37 @@
         </div>
       </li>
       <?php
+      $servername = 'localhost:3306';
+      $username = '18osfr';
+      $password = "Ogge020313";
+      $dbname = '18osfr';
+
+      $li = MySQLi_connect("$servername", "$username", "$password", "$dbname") or die ("MySQL: Anslutning misslyckades!");
+      $query = "SELECT * FROM `myFlow_DB` ORDER BY `myFlow_DB`.`post_date` ASC";
+      $result = mysqli_query($li, $query);
+
+  if($result) {
+      while ($row = mysqli_fetch_assoc($result)) {
+        //$id=$row['id'];
+        $post_title=$row['post_title'];
+        $post_date=$row['post_date'];
+        $post_content=$row['post_content'];
+
+              echo('<li>
+                <div id="top" class="container-fluid mt-2 col-md-12 bg-dark content">
+                  <span>
+                    <h1 class="postTitle">'.$post_title.'</h1>
+                    <h3 class="postDate">'.$post_date.'</h3>
+                    <br>
+                    '.$post_content.'
+                  </span>
+                </div>
+              </li>');
+        }
+      }
 
       ?>
-      <li><a hidden href="#18/10/2018">18/10/2018 How to calculate the distance between A and B in a 3 Dimensional coordinate system</a>
-        <div id="post2" class="container-fluid mt-2 col-md-12 bg-dark content">
-          <span>
-            <h1>How to calculate the distance between A and B in a 3 Dimensional coordinate system</h1>
-            <h3>18/10/2018</h3>
-            <br>
-            <p>So how so you actually calculate this?</p>
-            <p>Well let’s begin with actually showing what we are going to do.</p>
-            <p>In this case we are going to calculate the distance between the Origin “(0;0;0)” and P “(5;5;5)”</p>
-            <br>
-            <p>The picture below shows a 3 dimensional coordinate system.</p>
-            <img src="src-image/Post-Images/3DCalcExampel.png" style="width:30%;height:30%;">
-            <p>Every coordinate has 3 dimensional coordinates in them. The X coordinate, the y coordinate and the z coordinate.</p>
-            <br>
-            <p>In this case the origin is “obviously” (0;0;0) and P is (5;5;5), first we need to calculate the distance between each coordinate and that is what the (x1-x2), (y1-y2) and (z1-z2) after that you calculate the distance between the two points in the “grid”.</p>
-            <p>This you do with the equation below</p>
-            <p>√( (x1-x2)^2 + (y1-y2)^2 + (z1-z2)^2 )</p>
-            <br>
-            <p>And that is how you it, try it out and see the results.</p>
-            <p>Your results for this specific example should be around: 8.66 coordinate units.</p>
-            <br>
-            <p>To make this easier for you i have provided a calculator below programed for this specific task!</p>
-            <input id="x1" type="number" name="x1" value="" placeholder="x1"><input id="x2" type="number" name="x2" value="" placeholder="x2">
-            <br>
-            <input id="y1" type="number" name="y1" value="" placeholder="y1"><input id="y2" type="number" name="y2" value="" placeholder="y2">
-            <br>
-            <input id="z1" type="number" name="z1" value="" placeholder="z1"><input id="z2" type="number" name="z2" value="" placeholder="z2">
-            <br><br>
-            <button id="calculateAnswer" class="btn btn-primary" onclick="calculator3dDistance();">Calculate</button>
-            <br>
-            <br>
-            <p id="calcAnswer">Answer: <p>
-          </span>
-          <script>
-          'use strict';
-          function calculator3dDistance() {
-            var x1, x2, y1, y2, z1, z2, h, distance;
-            x1 = document.getElementById('x1').value;
-            x2 = document.getElementById('x2').value;
-            y1 = document.getElementById('y1').value;
-            y2 = document.getElementById('y2').value;
-            z1 = document.getElementById('z1').value;
-            z2 = document.getElementById('z2').value;
-            console.log(x1 + x2 + y1 + y2 + z1 + z2);
-            h = ((Math.pow((x1-x2),2)) + (Math.pow((x1-x2),2)) + (Math.pow((x1-x2),2)));
-            distance = Math.sqrt(h);
-            document.getElementById('calcAnswer').innerHTML = "Answer: " + distance + " Units";
-          }
-          </script>
-        </div>
-      </li>
-      <li><a hidden href="#14/10 2018">14/10/2018 Screenshot + Photoshop = Amazing picture!</a>
-        <div id="post1" class="container-fluid mt-2 col-md-12 bg-dark content">
-          <span>
-            <h1 id="postTitle">Screenshot + Photoshop = Amazing picture!</h1>
-            <h3 id="postDate">14/10 2018</h3>
-            <br>
-            <p>This is the image that i edited with photoshop during class...<br>It looks pretty good!</p>
-            <br>
-            <img src="src-image/Post-Images/The%20Crew%20Screenshot%202018.07.23%20-%2019.37.46.90.png" alt="Image not showing? Osacr forgot pathing it!" style="width: 50%; height: 50%;"></img>
-          </span>
-        </div>
-      </li>
-      <li><a hidden href="#17/10/2018">17/10/2018 This is just a test</a>
-        <div id="testPost1" class="container-fluid mt-2 col-md-12 bg-dark content">
-          <span>
-            <h1 id="postTitle">This is just a test</h1>
-            <h3 id="postDate">17/10 2018</h3>
-            <br>
-            <p>This is just a blogpost test to see that everything works</p>
-          </span>
-        </div>
-      </li>
+
     </ul>
         <!-- Modal -->
     <div class="modal fade" id="FAQModal" tabindex="-1" role="dialog" aria-labelledby="FAQModalLabel" aria-hidden="true">
