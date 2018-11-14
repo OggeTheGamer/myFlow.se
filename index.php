@@ -19,13 +19,15 @@
       <a class="navbar-brand" href="#top" data-toggle="tooltip" title="To the top!">
         <img src="src-image/logo.png" alt="logo" style="width:40px;">
       </a>
-      <form class="form-inline" action="">
-        <input id="postSearchBar" class="form-control mr-sm-2" data-toggle="tooltip" title="Search for a Date or Title!" type="text" onkeyup="postSearch()" placeholder="Search for a post!">
-      </form>
+      <div style="">
+        <form class="form-inline" action="">
+          <input id="postSearchBar" class="form-control mr-sm-2" data-toggle="tooltip" title="Search for a Date or Title!" type="text" onkeyup="postSearch()" placeholder="Search for a post!">
+        </form>
+      </div>
       <ul class="navbar-nav">
         <li class="nav-item">
           <div class="button-css">
-            <a type="button" class="nav-link navbar-button btn-primary" data-toggle="tooltip" title="I DO NOT GO ANYWARE! (-_-)" href="#">(-_-)</a>
+            <a type="button" class="nav-link navbar-button btn-primary" data-toggle="tooltip" title="I DO NOT GO ANYWARE! (-_-)" href="index.php">(-_-)</a>
           </div>
         </li>
         <li class="nav-item">
@@ -53,6 +55,9 @@
           </span>
         </div>
       </li>
+      <?php
+
+      ?>
       <li><a hidden href="#18/10/2018">18/10/2018 How to calculate the distance between A and B in a 3 Dimensional coordinate system</a>
         <div id="post2" class="container-fluid mt-2 col-md-12 bg-dark content">
           <span>
@@ -86,6 +91,22 @@
             <br>
             <p id="calcAnswer">Answer: <p>
           </span>
+          <script>
+          'use strict';
+          function calculator3dDistance() {
+            var x1, x2, y1, y2, z1, z2, h, distance;
+            x1 = document.getElementById('x1').value;
+            x2 = document.getElementById('x2').value;
+            y1 = document.getElementById('y1').value;
+            y2 = document.getElementById('y2').value;
+            z1 = document.getElementById('z1').value;
+            z2 = document.getElementById('z2').value;
+            console.log(x1 + x2 + y1 + y2 + z1 + z2);
+            h = ((Math.pow((x1-x2),2)) + (Math.pow((x1-x2),2)) + (Math.pow((x1-x2),2)));
+            distance = Math.sqrt(h);
+            document.getElementById('calcAnswer').innerHTML = "Answer: " + distance + " Units";
+          }
+          </script>
         </div>
       </li>
       <li><a hidden href="#14/10 2018">14/10/2018 Screenshot + Photoshop = Amazing picture!</a>

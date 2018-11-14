@@ -14,7 +14,7 @@ function postSearch() {
         }
     }
 }
-
+/*
 function calculator3dDistance() {
   var x1, x2, y1, y2, z1, z2, h, distance;
   x1 = document.getElementById('x1').value;
@@ -27,4 +27,4 @@ function calculator3dDistance() {
   h = ((Math.pow((x1-x2),2)) + (Math.pow((x1-x2),2)) + (Math.pow((x1-x2),2)));
   distance = Math.sqrt(h);
   document.getElementById('calcAnswer').innerHTML = "Answer: " + distance + " Units";
-}
+}*/
