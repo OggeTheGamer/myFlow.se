@@ -62,7 +62,7 @@
       $dbname = '18osfr';
 
       $li = MySQLi_connect("$servername", "$username", "$password", "$dbname") or die ("MySQL: Anslutning misslyckades!");
-      $query = "SELECT * FROM `myFlow_DB` ORDER BY `myFlow_DB`.`post_date` ASC";
+      $query = "SELECT * FROM `myFlow_DB` ORDER BY `myFlow_DB`.`post_date` DESC";
       $result = mysqli_query($li, $query);
 
   if($result) {
