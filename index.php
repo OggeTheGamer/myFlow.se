@@ -56,10 +56,10 @@
         </div>
       </li>
       <?php
-      $servername = 'localhost:3306';
-      $username = '18osfr';
-      $password = "Ogge020313";
-      $dbname = '18osfr';
+      $servername = '';
+      $username = '';
+      $password = "";
+      $dbname = '';
 
       $li = MySQLi_connect("$servername", "$username", "$password", "$dbname") or die ("MySQL: Anslutning misslyckades!");
       $query = "SELECT * FROM `myFlow_DB` ORDER BY `myFlow_DB`.`post_date` DESC";
