@@ -1,0 +1,247 @@
+/*
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 80vw 1fr;
+  grid-template-rows: 3fr auto 3fr;
+}
+
+
+.main-container {
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  grid-auto-rows: minmax(100px, auto)
+}
+
+.main-container > div{
+  background: rgba(25, 219, 180,0.7);
+  border: 2px solid rgba(0.2,0.2,0.2,0.6);
+  padding: 1em;
+  align-self: center;
+}
+
+.main-container > div:nth-child(odd){
+  background: rgba(25, 119, 180,0.7);
+  border: 2px solid rgba(0.2,0.2,0.2,0.7)
+}
+
+*/
+::-webkit-scrollbar {
+display: none;
+}
+
+body {
+  margin: 0px !important;
+}
+
+.wrapper {
+  display: grid;
+  height: minmax(100vh, auto);
+  grid-template-rows: minmax(10vh, auto) minmax(73vh, auto) minmax(10vh, auto);
+}
+
+.wrapper > div {
+
+}
+
+.wrapper > div:nth-last-child() {
+  align-self: end;
+}
+
+.main-container {
+  display: grid;
+  grid-row: 2/3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.media-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+  justify-self: center;
+  grid-column: 2;
+
+}
+
+.main-container > div {
+  border: 2px solid black;
+}
+
+.media-container > div {
+  /*border: 1px solid black;*/
+  margin: 1vw;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.header-container {
+  display: flex;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer-text {
+  margin-right: auto;
+  grid-column: 1;
+}
+
+.QR{
+  display: grid;
+  margin-left: auto;
+  width: 100px;
+  height: 100px;
+  grid-column: 3;
+}
+
+.one {
+  z-index: 100;
+
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two {
+  display: flex;
+  font-size: 300%;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  z-index: 100;
+
+  grid-column: 1;
+  grid-row: 2 / 5;
+  justify-self: center;
+  align-self: center;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+  justify-self: center;
+  align-self: center;
+}
+.five {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.insta_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 350%;
+}
+.face_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 350%;
+}
+.git_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3;
+  grid-row: 1;
+  font-size: 350%;
+}
+.li_button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 4;
+  grid-row: 1;
+  font-size: 350%;
+}
+/*
+.insta_button:hover{
+  transition: ease-in;
+  transition-duration: 0.3s;
+  background-color: purple;
+}
+.face_button:hover{
+  transition: ease-in;
+  transition-duration: 0.3s;
+  background-color: blue;
+}
+.git_button:hover{
+  transition: ease-in;
+  transition-duration: 0.3s;
+  background-color: #c9510c;
+}
+.li_button:hover{
+  transition: ease-in;
+  transition-duration: 0.3s;
+  background-color: blue;
+}
+*/
+.background-test-2{
+  background:
+  linear-gradient(to top, black 1%,	#00d4ff, black 99%);
+  animation: ANI1 5s infinite;
+  border: 0px !important;
+  grid-column: 1/5;
+  grid-row: 1/5;
+}
+.background-test{
+  background:
+  linear-gradient(to top, black 1%, #00ffff, black 99%);
+}
+@keyframes ANI1 {
+  0% {
+    opacity: 1;
+    transition: ease-in-out;
+  }
+  50% {
+    opacity: 0;
+    transition: ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    transition: ease-in-out;
+
+  }
+}
+
+
+.background-cmas:hover {
+  animation: c-mas-1 1s infinite;
+}
+
+@keyframes c-mas-1 {
+  0%{
+    background-color: red;
+    transition: ease-in-out;
+  }
+  50%{
+    background-color: white;
+    transition: ease-in-out;
+  }
+  100%{
+    background-color: red;
+    transition: ease-in-out;
+  }
+}
