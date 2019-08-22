@@ -1,221 +1,40 @@
-:root {
-  --primary-color:rgba(255, 0, 0, 0.5);
-  --secondary-color:rgba(0, 255, 0, 0.5);
-  --detail-color:rgba(255, 255, 255, 0.5);
-  --trim-color:rgba(0, 0, 255, 0.5);
-  }
-::-webkit-scrollbar {
-  display: none;
+body
+{
+    margin: 0;
 }
-
-body {
-  margin: 0px !important;
-  font-family: 'Righteous', cursive;
-}
-
-.background-1 {
-animation: ANI1 5s infinite;
-}
-
-.background-2 {
-  background: linear-gradient(to top, black 1%, rgba(0, 0, 0, 0), black 99%);
-}
-
-.wrapper {
-  display: grid;
-  grid-template-rows: minmax(10vh, auto) minmax(80vh, auto) minmax(10vh, auto);
-}
-
-.wrapper > div {
-
-}
-
-.wrapper > div:nth-last-child() {
-  align-self: end;
-}
-
-.main-container{
-  padding-left: 10px;
-  padding-right: 10px;
-  grid-gap: 10px;
-  grid-auto-rows: minmax(10px, auto);
-}
-
-.main-container > div:hover {
-  transition: 0.1s;
-  background-color:rgba(192,192,192,0.5);
-}
-
-@media (max-width: 900px) {
-  .main-container {
+#wrapper
+{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .main-container > div {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+    grid-template-columns: [L1] 40px [L2] 50px [CC] auto [R2] 50px [R1] 40px;
+    grid-template-rows: [T1] 25% [T2] 100px [CR] auto [B] 0px;
 }
 
-@media (min-width: 900px) {
-  .main-container {
+#header-wrapper
+{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
-.main-container {
-  grid-row: 2/3;
-  padding: 20px 0px 20px 0px;
+#content-wrapper
+{
+    display: grid;
+    grid-column: CC/R2;
+    grid-row: T2;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: whitesmoke;
 }
 
-.media-container {
-  display: flex;
-  justify-content: center;
+#footer-wrapper
+{
+    display: grid;
 }
 
-.main-container > div {
-  border: 2px solid black;
-  border-radius: 1em;
-  padding: 0px 5px 0px 5px;
-  background-color:rgba(192,192,192,0.2);
-  transition: 0.1s;
-}
-
-.media-container > div {
-  /*border: 1px solid black;*/
-  margin: 1vw;
-  border-radius: 15%;
-  cursor: pointer;
-}
-
-.header-container {
-  display: flex;
-  padding: 0px 10px 0px 10px;
-  color: #efefef;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  padding: 0px 10px 0px 10px;
-}
-
-.footer-text {
-  margin-right: auto;
-  grid-column: 1;
-  color: #efefef;
-}
-
-.QR{
-  display: grid;
-  margin-left: auto;
-  margin-bottom: 10px;
-  width: 100px;
-  height: 100px;
-  grid-column: 3;
-  border: 1px black solid;
-  border-radius: 5px;
-}
-
-.one {
-  grid-column: 1 / 3;
-  grid-row: 1;
-}
-.two {
-  display: flex;
-  font-size: 300%;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
-}
-.three {
-
-  grid-column: 1;
-  grid-row: 2 / 5;
-  justify-self: center;
-  align-self: center;
-}
-.four {
-  grid-column: 3;
-  grid-row: 3;
-  justify-self: center;
-  align-self: center;
-}
-.five {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 2;
-  grid-row: 4;
-}
-.six {
-  grid-column: 3;
-  grid-row: 4;
-}
-
-.media_button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  grid-column: 1;
-  grid-row: 1;
-  font-size: 350%;
-  color: rgba(138,73,161,1);
-  transition: ease-in-out;
-  transition-duration: 0.1s;
-}
-
-.media_button:hover{
-  transition: ease-in-out;
-  transition-duration: 0.1s;
-  color: rgba(138,73,161,0.5);
-}
-
-}
-
-.background-ani{
-  border: 0px !important;
-  z-index: -2 !important;
-}
-
-
-
-@keyframes ANI1 {
-  0% {
-    background: lime;
-    transition: ease-in-out;
-  }
-  50% {
-    background: cyan;
-    transition: ease-in-out;
-  }
-  100% {
-    background: lime;
-    transition: ease-in-out;
-
-  }
-}
-
-
-.background-cmas:hover {
-  animation: c-mas-1 1s infinite;
-}
-
-@keyframes c-mas-1 {
-  0%{
-    background-color: red;
-    transition: ease-in-out;
-  }
-  50%{
-    background-color: white;
-    transition: ease-in-out;
-  }
-  100%{
-    background-color: red;
-    transition: ease-in-out;
-  }
+video
+{
+    z-index: -1;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
 }

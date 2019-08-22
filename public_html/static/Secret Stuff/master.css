@@ -1,0 +1,38 @@
+body {
+    background: #333;
+}
+
+.uncover-box-1 {
+    background: white;
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    display: none;
+    cursor: grab;
+}
+
+.uncover-box-2 {
+    background: white;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    display: none;
+    cursor: grab;
+}
+
+.uncover-box-3 {
+    background: white;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    display: none;
+    cursor: grab;
+}
+
+.final-box {
+    background: white;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    cursor: grab;
+}
