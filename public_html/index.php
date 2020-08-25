@@ -1,46 +1,104 @@
 <?php
-$JS_dir = "static/js/";
-$CSS_dir = "static/css/";
-$MEDIA_dir = "static/media/";
+
+// Path Config Beginning //
+$JS_PATH = "static/js/";
+$CSS_PATH = "static/css/";
+$MEDIA_PATH = "static/media/";
+
+$MODULES_PATH = "../private_html/modules/";
+$PAGES_PATH = "../private_html/pages/";
+$VENDOR_PATH = "../private_html/vendor/";
+
+// Path Config Ending //
+
+// Webpage building Beginning //
+echo("<!DOCTYPE html>");
+
+require($MODULES_PATH."head.php");
+
+echo('<video class="background-video"src="static/media/Stars.mp4" type="video/mp4" autoplay loop muted></video>');
+
+echo("<div id='wrapper'>");
+
+echo("<div id='icon'>");
+echo("<a href='/?page=home'><img src='static/icon.png' alt='OF_ICON'></a>");
+echo("</div>");
+
+echo("<div id='nav-wrapper'>");
+require($MODULES_PATH."navbar.php");
+echo("</div>");
+
+echo("<div id='content-wrapper'>");
+
+if (isset($_GET["page"]))
+{
+    switch ($_GET["page"])
+    {
+        case 'home':
+            if(file_exists($PAGES_PATH."home.php"))
+            {
+                require($PAGES_PATH."home.php");
+            }
+            else
+            {
+                require($PAGES_PATH."error_pages/404.php");    
+            }
+            break;
+
+        case 'projects':
+            if(file_exists($PAGES_PATH."projects.php"))
+            {
+                require($PAGES_PATH."projects.php");
+            }
+            else
+            {
+                require($PAGES_PATH."error_pages/404.php");    
+            }
+            break;
+
+        case 'about':
+            if(file_exists($PAGES_PATH."about.php"))
+            {
+                require($PAGES_PATH."about.php");
+            }
+            else
+            {
+                require($PAGES_PATH."error_pages/404.php");    
+            }
+            break;
+
+        case 'contact':
+            if(file_exists($PAGES_PATH."contact.php"))
+            {
+                require($PAGES_PATH."contact.php");
+            }
+            else
+            {
+                require($PAGES_PATH."error_pages/404.php");    
+            }
+            break;
+
+        default:
+            require($PAGES_PATH."error_pages/404.php");
+            break;
+    }
+}
+else
+{
+    if(file_exists($PAGES_PATH."home.php"))
+    {
+        require($PAGES_PATH."home.php");
+    }
+    else
+    {
+        require($PAGES_PATH."error_pages/404.php");    
+    }
+}
+
+
+
+echo("</div>");
+echo("<div id='footer-wrapper'></div>");
+echo("</div>");
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <script src='<?=$JS_dir?>main.js'></script>
-    <script src='<?=$JS_dir?>checkBrowser.js'></script>
-    <script src="static/Secret Stuff/main.js"></script>
-
-    <link rel="stylesheet" href='<?=$CSS_dir?>master.css'>
-    <link rel="stylesheet" href="static/Secret Stuff/master.css">
-
-    <title>18osfr</title>
-</head>
-<body>
-    <div class="final-box" onclick="breakWebpage(1)">
-        <div class="uncover-box-3" onclick="breakWebpage(2)">
-            <div class="uncover-box-2" onclick="breakWebpage(3)">
-                <div class="uncover-box-1">
-                    <p>Du ser bra ut idag.<br>Hoppas du har en fin dag!</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <video src="static/media/Stars.mp4" autoplay loop mute></video>
-    <div id="wrapper">
-        <div id="header-wrapper"></div>
-        <div id="content-wrapper">
-            <h1>Hej</h1>
-            <h2>Jag är Oscar Freij (18osfr)<br>Och denna sida är under extrem utväckling</h2>
-            <br>
-            <br>
-            <h3>Tills jag har "lagat" det jag förstört på hemsidan så är detta det ända du kommer se.</h3>
-        </div>
-        <div id="footer-wrapper"></div>
-    </div>
-</body>
-</html>
